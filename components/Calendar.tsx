@@ -102,7 +102,7 @@ const gifts = [
 
 export default function Calendar() {
   const [days, setDays] = useState<Gift[]>(gifts);
-  const [currentDate, setCurrentDate] = useState(new Date("2024-12-18"));
+  const [currentDate, setCurrentDate] = useState();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
