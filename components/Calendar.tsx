@@ -102,7 +102,7 @@ const gifts = [
 
 export default function Calendar() {
   const [days, setDays] = useState<Gift[]>(gifts);
-  const [currentDate, setCurrentDate] = useState();
+  const [currentDate, setCurrentDate] = useState(new Date());
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
