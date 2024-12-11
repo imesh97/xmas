@@ -176,12 +176,13 @@ export default function Calendar() {
           initial="initial"
           whileHover="hovered"
           className={`text-2xl sm:text-3xl xl:text-4xl min-[1600px]:text-5xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
-          <motion.div variants={{ initial: { y: 0 }, hovered: { y: "-110%" } }}>
+          <motion.div
+            variants={{ initial: { y: "-10%" }, hovered: { y: "-110%" } }}>
             ~ for Sydney Turner ~
           </motion.div>
           <motion.div
             className="absolute inset-0"
-            variants={{ initial: { y: "110%" }, hovered: { y: 0 } }}>
+            variants={{ initial: { y: "110%" }, hovered: { y: "-10%" } }}>
             ~ for Sudu Manika ~
           </motion.div>
         </motion.h2>
