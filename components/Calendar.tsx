@@ -155,12 +155,12 @@ export default function Calendar() {
   return (
     <div className="min-w-full min-h-screen mx-auto px-4 grid grid-cols-3 z-50">
       <div className="col-span-3 lg:col-span-1 mt-6 lg:my-auto">
-        <div className="text-5xl sm:text-6xl xl:text-7xl font-bold text-center text-white tracking-wider">
+        <div className="text-5xl sm:text-6xl xl:text-7xl min-[1600px]:text-8xl font-bold text-center text-white tracking-wider">
           12 Days of{" "}
           <motion.h1
             initial="initial"
             whileHover="hovered"
-            className="text-5xl sm:text-6xl xl:text-7xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap">
+            className="text-5xl sm:text-6xl xl:text-7xl min-[1600px]:text-8xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap">
             <motion.div
               variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}>
               Christmas
@@ -175,7 +175,7 @@ export default function Calendar() {
         <motion.h2
           initial="initial"
           whileHover="hovered"
-          className={`text-2xl sm:text-3xl xl:text-4xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
+          className={`text-2xl sm:text-3xl xl:text-4xl min-[1600px]:text-5xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
           <motion.div variants={{ initial: { y: 0 }, hovered: { y: "-110%" } }}>
             ~ for Sydney Turner ~
           </motion.div>
