@@ -155,12 +155,12 @@ export default function Calendar() {
   return (
     <div className="min-w-full min-h-screen mx-auto px-4 grid grid-cols-3 z-50">
       <div className="col-span-3 lg:col-span-1 mt-6 lg:my-auto">
-        <div className="text-5xl sm:text-7xl font-bold text-center text-white tracking-wider">
+        <div className="text-5xl sm:text-6xl xl:text-7xl font-bold text-center text-white tracking-wider">
           12 Days of{" "}
           <motion.h1
             initial="initial"
             whileHover="hovered"
-            className="text-5xl sm:text-7xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap">
+            className="text-5xl sm:text-6xl xl:text-7xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap">
             <motion.div
               variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}>
               Christmas
@@ -175,7 +175,7 @@ export default function Calendar() {
         <motion.h2
           initial="initial"
           whileHover="hovered"
-          className={`text-3xl sm:text-4xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
+          className={`text-2xl sm:text-3xl xl:text-4xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
           <motion.div variants={{ initial: { y: 0 }, hovered: { y: "-110%" } }}>
             ~ for Sydney Turner ~
           </motion.div>
@@ -203,13 +203,13 @@ export default function Calendar() {
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
         variants={containerVariants}>
-        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 align-middle">
+        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 align-middle">
           {days.map((day) => (
             <motion.div key={day.day} variants={cardVariants}>
               <Card
                 className={`overflow-hidden border-none bg-transparent shadow-sm`}>
                 <motion.div
-                  className={`h-40 min-[1600px]:h-64 flex flex-col items-center justify-center cursor-pointer px-4 py-6 rounded-3xl ${day.pattern}`}
+                  className={`h-40 min-[1440px]:h-52 min-[1600px]:h-64 flex flex-col items-center justify-center cursor-pointer px-4 py-6 rounded-3xl ${day.pattern}`}
                   whileHover={day.isOpen ? { scale: 1.05 } : { scale: 1.2 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleDayClick(day.day)}>
