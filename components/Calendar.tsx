@@ -44,8 +44,8 @@ const gifts = [
   },
   {
     day: 5,
-    gift: "A USB-C Charger",
-    message: "On the first day of Christmas, my true love gave to me...",
+    gift: "Kindle Premium Books x5",
+    message: "Five books to read...",
     isOpen: false,
     pattern: "bg-pi-la",
   },
