@@ -51,8 +51,8 @@ const gifts = [
   },
   {
     day: 6,
-    gift: "Dove Body Wash x2",
-    message: "Six months of wash...",
+    gift: "Heart Sushi",
+    message: "Six SALMON AVO...",
     isOpen: false,
     pattern: "bg-pi-la",
   },
@@ -65,8 +65,8 @@ const gifts = [
   },
   {
     day: 8,
-    gift: "A USB-C Charger",
-    message: "On the first day of Christmas, my true love gave to me...",
+    gift: "Dove Body Wash x2",
+    message: "Eight months of wash...",
     isOpen: false,
     pattern: "bg-pi-la",
   },
