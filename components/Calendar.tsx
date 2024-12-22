@@ -73,7 +73,7 @@ const gifts = [
   {
     day: 9,
     gift: "A Box of Chocolates",
-    message: "Nine days of chocolates...",
+    message: "Nine days of chocolate...",
     isOpen: false,
     pattern: "bg-pi",
   },
