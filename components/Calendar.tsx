@@ -72,8 +72,8 @@ const gifts = [
   },
   {
     day: 9,
-    gift: "A USB-C Charger",
-    message: "On the first day of Christmas, my true love gave to me...",
+    gift: "A Box of Chocolates",
+    message: "Nine days of chocolates...",
     isOpen: false,
     pattern: "bg-pi",
   },
