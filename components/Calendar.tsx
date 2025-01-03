@@ -79,8 +79,8 @@ const gifts = [
   },
   {
     day: 10,
-    gift: "A USB-C Charger",
-    message: "On the first day of Christmas, my true love gave to me...",
+    gift: "4x GF Cupcakes",
+    message: "Ten bites of cake...",
     isOpen: false,
     pattern: "bg-pi",
   },
@@ -115,7 +115,7 @@ export default function Calendar() {
   }, []);
 
   const handleDayClick = (day: number) => {
-    const dayDate = new Date(currentDate.getFullYear(), 11, 25 - 12 + day);
+    const dayDate = new Date(2024, 11, 25 - 12 + day);
 
     if (currentDate >= dayDate) {
       setDays((prevDays) =>
@@ -129,7 +129,7 @@ export default function Calendar() {
   };
 
   const isClickable = (day: number) => {
-    const dayDate = new Date(currentDate.getFullYear(), 11, 25 - 12 + day);
+    const dayDate = new Date(2024, 11, 25 - 12 + day);
     return currentDate >= dayDate;
   };
 
@@ -160,14 +160,17 @@ export default function Calendar() {
           <motion.h1
             initial="initial"
             whileHover="hovered"
-            className="text-5xl sm:text-6xl xl:text-7xl min-[1600px]:text-8xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap">
+            className="text-5xl sm:text-6xl xl:text-7xl min-[1600px]:text-8xl font-bold text-center text-white mt-2 mb-4 tracking-wider relative block overflow-hidden whitespace-nowrap"
+          >
             <motion.div
-              variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}>
+              variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}
+            >
               Christmas
             </motion.div>
             <motion.div
               className="absolute inset-0"
-              variants={{ initial: { y: "100%" }, hovered: { y: 0 } }}>
+              variants={{ initial: { y: "100%" }, hovered: { y: 0 } }}
+            >
               Gifts & Luv
             </motion.div>
           </motion.h1>
@@ -175,14 +178,17 @@ export default function Calendar() {
         <motion.h2
           initial="initial"
           whileHover="hovered"
-          className={`text-2xl sm:text-3xl xl:text-4xl min-[1600px]:text-5xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}>
+          className={`text-2xl sm:text-3xl xl:text-4xl min-[1600px]:text-5xl text-center text-white opacity-80 tracking-wide relative block overflow-hidden whitespace-nowrap`}
+        >
           <motion.div
-            variants={{ initial: { y: "-10%" }, hovered: { y: "-110%" } }}>
+            variants={{ initial: { y: "-10%" }, hovered: { y: "-110%" } }}
+          >
             ~ for Sydney Turner ~
           </motion.div>
           <motion.div
             className="absolute inset-0"
-            variants={{ initial: { y: "110%" }, hovered: { y: "-10%" } }}>
+            variants={{ initial: { y: "110%" }, hovered: { y: "-10%" } }}
+          >
             ~ for Sudu Manika ~
           </motion.div>
         </motion.h2>
@@ -203,17 +209,20 @@ export default function Calendar() {
         className="col-span-3 lg:col-span-2 min-w-full max-w-full px-8 min-[1600px]:pl-6 min-[1600px]:pr-12 my-12 lg:my-auto align-middle"
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
-        variants={containerVariants}>
+        variants={containerVariants}
+      >
         <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 align-middle">
           {days.map((day) => (
             <motion.div key={day.day} variants={cardVariants}>
               <Card
-                className={`overflow-hidden border-none bg-transparent shadow-sm`}>
+                className={`overflow-hidden border-none bg-transparent shadow-sm`}
+              >
                 <motion.div
                   className={`h-40 min-[1440px]:h-52 min-[1600px]:h-64 flex flex-col items-center justify-center cursor-pointer px-4 py-6 rounded-3xl ${day.pattern}`}
                   whileHover={day.isOpen ? { scale: 1.05 } : { scale: 1.2 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => handleDayClick(day.day)}>
+                  onClick={() => handleDayClick(day.day)}
+                >
                   <AnimatePresence mode="wait">
                     {day.isOpen ? (
                       <motion.div
@@ -222,11 +231,13 @@ export default function Calendar() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.5 }}
-                        className="text-center text-white">
+                        className="text-center text-white"
+                      >
                         <motion.div
                           initial={{ y: -20, opacity: 0 }}
                           animate={{ y: 0, opacity: 1 }}
-                          transition={{ delay: 0.2, duration: 0.3 }}>
+                          transition={{ delay: 0.2, duration: 0.3 }}
+                        >
                           <p className="text-base sm:text-lg font-thin mb-2">
                             {day.message}
                           </p>
@@ -242,7 +253,8 @@ export default function Calendar() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.5 }}
-                        className="text-center text-white p-4">
+                        className="text-center text-white p-4"
+                      >
                         <motion.div
                           animate={
                             isClickable(day.day) ? { scale: [1, 1.1, 1] } : {}
@@ -250,7 +262,8 @@ export default function Calendar() {
                           transition={{
                             repeat: Infinity,
                             duration: 1.5,
-                          }}>
+                          }}
+                        >
                           <div className="text-8xl font-medium mb-2">
                             {day.day}
                           </div>
